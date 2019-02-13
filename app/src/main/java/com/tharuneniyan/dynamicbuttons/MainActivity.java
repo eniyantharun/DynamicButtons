@@ -52,17 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void rightRotate(int[] inputArray, int n) {
 
-        Log.d(MainActivity.class.getSimpleName(),"inputArrayf"+Arrays.toString(inputArray));
-
         int temp;
-        for (int i = 1; i <= n; i++)
+
+        for (int i = 0; i < n; i++)
         {
-            temp = inputArray[inputArray.length-1];
-            for (int j = inputArray.length-1; j > 0; j--)
+            temp = inputArray[0];
+
+            for (int j = 0; j < inputArray.length-1; j++)
             {
-                inputArray[j] = inputArray[j-1];
+                inputArray[j] = inputArray[j+1];
             }
-            inputArray[0] = temp;
+
+            inputArray[inputArray.length - 1] = temp;
         }
 
         Log.d(MainActivity.class.getSimpleName(),"inputArrayf"+Arrays.toString(inputArray));
