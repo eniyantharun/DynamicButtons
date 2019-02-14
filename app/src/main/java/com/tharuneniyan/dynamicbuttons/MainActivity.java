@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         button1.setText("1");
         button2.setText("2");
         button3.setText("3");
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 leftRotate(inputArray);
-                buttonNameSet(inputArray);
 
             }
         });
@@ -37,14 +37,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 leftRotate(inputArray);
-                buttonNameSet(inputArray);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 leftRotate(inputArray);
-                buttonNameSet(inputArray);
+
             }
         });
     }
@@ -60,12 +59,11 @@ public class MainActivity extends AppCompatActivity {
             inputArray[inputArray.length - 1] = temp;
 
         Log.d(MainActivity.class.getSimpleName(),"inputArray"+Arrays.toString(inputArray));
-    }
-
-    private void buttonNameSet(int[] inputArray) {
         button1.setText(String.valueOf(inputArray[0]));
         button2.setText(String.valueOf(inputArray[1]));
         button3.setText(String.valueOf(inputArray[2]));
     }
+
+
 }
 
