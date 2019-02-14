@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rightRotate(inputArray, 1);
+                leftRotate(inputArray);
                 buttonNameSet(inputArray);
 
             }
@@ -36,37 +36,30 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rightRotate(inputArray, 1);
+                leftRotate(inputArray);
                 buttonNameSet(inputArray);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rightRotate(inputArray, 1);
+                leftRotate(inputArray);
                 buttonNameSet(inputArray);
             }
         });
-
     }
 
-    private void rightRotate(int[] inputArray, int n) {
-
+    private void leftRotate(int[] inputArray) {
+        Toast.makeText(this, "Fill the sheets ma", Toast.LENGTH_SHORT).show();
         int temp;
 
-        for (int i = 0; i < n; i++)
-        {
             temp = inputArray[0];
-
-            for (int j = 0; j < inputArray.length-1; j++)
-            {
+            for (int j = 0; j < inputArray.length-1; j++){
                 inputArray[j] = inputArray[j+1];
             }
-
             inputArray[inputArray.length - 1] = temp;
-        }
 
-        Log.d(MainActivity.class.getSimpleName(),"inputArrayf"+Arrays.toString(inputArray));
+        Log.d(MainActivity.class.getSimpleName(),"inputArray"+Arrays.toString(inputArray));
     }
 
     private void buttonNameSet(int[] inputArray) {
