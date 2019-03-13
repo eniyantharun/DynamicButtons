@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void leftRotate(int[] inputArray) {
-        Toast.makeText(this, "Fill the sheets ma", Toast.LENGTH_SHORT).show();
+       
         int temp;
 
             temp = inputArray[0];
